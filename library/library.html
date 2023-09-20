@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../transition.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="library.css">
+    <link rel="icon" type="image/x-icon" href="/icons/book-open-page-variant-outline.svg">
+</head>
+<body>
+    <!--Drawer-->
+    <div class="drawer">
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img class="dash-icon" src="/icons/view-dashboard.svg" alt="">
+            <h1 class="dash-title">Dashboard</h1>
+        </div>
+        <!--divider-bar-->
+        <div class="menu-image">
+            <div class="divider-bar"></div>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <a href="/"><img src="/icons/home.svg" alt=""></a>
+            <h1 class="icon-title">Home</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <a href="/library/library.html"><img src="/icons/book-open-page-variant-outline.svg" alt=""></a>
+            <h1 class="icon-title">Library</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/message-reply-outline.svg" alt="">
+            <h1 class="icon-title">Messages</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/clock-outline.svg" alt="">
+            <h1 class="icon-title">History</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/note-multiple-outline.svg" alt="">
+            <h1 class="icon-title">Tasks</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/account-group.svg" alt="">
+            <h1 class="icon-title">Communities</h1>
+        </div>
+        <!--divider-bar-->
+        <div class="menu-image">
+            <div class="divider-bar"></div>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/cog.svg" alt="">
+            <h1 class="icon-title">Settings</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/message-question.svg" alt="">
+            <h1 class="icon-title">Support</h1>
+        </div>
+        <!--drawer menu item-->
+        <div class="menu-image">
+            <img src="/icons/shield-check.svg" alt="">
+            <h1 class="icon-title">Privacy</h1>
+        </div>
+    </div>
+    <div class="nav">
+        <!-- top section -->
+        <div class="topNav">
+            <!-- Search icon and search bar -->
+            <div class="search">
+                <div class="navItem">
+                    <img src="/icons/magnify.svg" alt="">
+                </div>
+                <input type="text" name="search" autocomplete="off">
+            </div>
+            <div class="account">
+                <div class="menuIcon">
+                    <img src="/icons/bell-ring-outline.svg" alt="">
+                </div>
+                <!-- avatar from Github -->
+                <div class="gh-avatar"></div>
+                <p class="name">Daniel Toomey</p>
+            </div>
+        </div>
+        <!-- bottom section -->
+        <div class="bottomNav">
+            <!-- profile details -->
+            <div class="profile">
+                <div class="gh-avatar"></div>
+                <div class="profile-name">
+                    <p class="greeting">Hi there,</p>
+                    <p class="name">Daniel Toomey <span class="username">(@dtoomey156)</span></p>
+                </div>
+            </div>
+            <!-- button section -->
+            <div class="buttons">
+                <button class="btn add-book">New</button>
+                <button class="btn">Upload</button>
+                <button class="btn">Share</button>
+            </div>
+        </div>
+    </div>
+    <!-- Main content -->
+    <div class="content">
+        <div class="projects">
+            <h3>Your Books</h3>
+            <div class="books cards"></div>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-form">
+                <h1 class="form-title">Add Book</h1>
+                <form class="add-book-form">
+                    <div class="modal-input-field">
+                        <label for="book-title">Title</label>
+                        <input type="text" name="book-title" id="book-title" class="modal-form-input">
+                    </div>
+                    <div class="modal-input-field">
+                        <label for="book-author">Author</label>
+                        <input type="text" name="book-author" id="book-author" class="modal-form-input">
+                    </div>
+                    <div class="modal-input-field">
+                        <label for="book-pages">Pages</label>
+                        <input type="number" min="0" name="book-pages" id="book-pages" class="modal-form-input">
+                    </div>
+                    <div class="modal-input-field">
+                        <span class="modal-read">Read</span>
+                        <label class="container">
+                            <input type="checkbox" name="book-read" id="book-read" class="checkmark">
+                        </label>
+                    </div>
+                    <div class="submit-modal-form">
+                        <button type="submit" class="btn form-add-button"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
